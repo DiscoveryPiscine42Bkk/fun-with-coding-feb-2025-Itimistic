@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        #circle {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="balloonClick()" onmouseleave="balloonLeave()" id="circle"></div>
+
+    <script>
+        let circle = document.getElementById("circle");
+        let colors = ["red", "green", "blue"];
+        let index = 0;
+
+        function balloonClick() {
+            let current = circle.offsetWidth;
+
+            if (current < 420) {
+                let newSize = current + 10;
+                circle.style.width = newSize + "px";
+                circle.style.height = newSize + "px";
+            } else {
+                circle.style.width = 200 + "px";
+                circle.style.height = 200 + "px";
+            }
+
+            index = (index + 1) % colors.length;
+            circle.style.backgroundColor = colors[index];
+        }
+
+        function balloonLeave() {
+            let current = circle.offsetWidth;
+
+            if (current > 200) {
+                let newSize = current - 5;
+                circle.style.width = newSize + "px";
+                circle.style.height = newSize + "px";
+            }
+
+            index = (index - 1 + colors.length) % colors.length;
+            circle.style.backgroundColor = colors[index];
+        }
+    </script>
+</body>
+</html>
