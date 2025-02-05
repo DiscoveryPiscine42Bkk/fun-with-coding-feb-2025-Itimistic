@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.row {
+    width: 100%;
+}
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+#one {
+    background-color: greenyellow;
+}
+#two {
+    background-color: orange;
+}
