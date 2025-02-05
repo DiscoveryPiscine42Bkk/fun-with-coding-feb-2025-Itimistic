@@ -1,0 +1,60 @@
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px; 
+    height: auto; 
+    justify-items: center;
+    background-color: rgb(234, 234, 234);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    background-image: url("https://scontent.fbkk13-2.fna.fbcdn.net/v/t39.30808-6/461415747_532158009557336_1190505662330201547_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_Z2YOuvX_RUQ7kNvgHTLx3_&_nc_oc=AdjDilXN8FIS7_yOlnn0TNSINuo3r-VGirW1m8wSK3eo2yFnXxkMaXfTGHb4D9l848WPDjNuusOc-R7YBIgzxMX8&_nc_zt=23&_nc_ht=scontent.fbkk13-2.fna&_nc_gid=Ah708EOrSpgV_4cnFJo59fS&oh=00_AYA-q0xH8ygRRef6w1OS3VdwWwSEsjS-5i6dBfDVc8a5Yw&oe=67A929FD"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.buttn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
