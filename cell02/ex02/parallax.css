@@ -1,0 +1,46 @@
+.bg-1 {
+    background-image: url("https://wallpapers.com/images/featured/high-resolution-gfinds1akzwf6vcq.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.bg-2 {
+    background-color: black;
+    background-position: center;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.bg-3 {
+    background-image: url("https://ugc.futurelearn.com/uploads/images/7a/1a/7a1aec47-8310-4f1a-887c-3afa46c72495.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 80%;
+}
