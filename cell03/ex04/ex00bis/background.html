@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>background</title>
+</head>
+<body>
+    <script>
+        function change(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+
+            let color = `rgb(${x}, ${y}, ${z})`
+            $("body").css("background-color", color)
+        }
+        $(document).ready(function() {
+            $("button").on("click", change);
+        })
+    </script>
+    <button type="button">
+        Click me!
+    </button>
+    
+</body>
+</html>
