@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Balloon</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        #circle {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+
+    <script>
+        let circle = document.getElementById("circle");
+        let colors = ["red", "green", "blue"];
+        let index = 0;
+
+        $(document).ready(function() {
+            $("circle").on("click", balloonClick);
+            $("circle").on("mouseleave", balloonLeave);
+        })
+
+        function balloonClick() {
+            let current = circle.offsetWidth;
+
+            if (current < 420) {
+                let newSize = current + 10;
+                $("#circle").css("width", newSize);
+                $("#circle").css("height", newSize);
+            } else {
+                $("#circle").css("width", 200);
+                $("#circle").css("height", 200);
+            }
+
+            index = (index + 1) % colors.length;
+            $("#circle").css("background-color", colors[index]);
+        }
+
+        function balloonLeave() {
+            let current = circle.offsetWidth;
+
+            if (current > 200) {
+                let newSize = current - 5;
+                $("#circle").css("width", newSize);
+                $("#circle").css("height", newSize);
+            }
+
+            index = (index - 1 + colors.length) % colors.length;
+            $("#circle").css("background-color", colors[index]);
+        }
+    </script>
+</body>
+</html>
