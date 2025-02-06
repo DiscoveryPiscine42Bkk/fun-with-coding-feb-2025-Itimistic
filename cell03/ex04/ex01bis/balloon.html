@@ -25,15 +25,14 @@
 </head>
 <body>
     <div id="circle"></div>
-
     <script>
         let circle = document.getElementById("circle");
         let colors = ["red", "green", "blue"];
         let index = 0;
 
         $(document).ready(function() {
-            $("circle").on("click", balloonClick);
-            $("circle").on("mouseleave", balloonLeave);
+            $("#circle").on("click", balloonClick);
+            $("#circle").on("mouseleave", balloonLeave);
         })
 
         function balloonClick() {
