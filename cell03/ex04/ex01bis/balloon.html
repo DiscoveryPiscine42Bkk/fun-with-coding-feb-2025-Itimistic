@@ -19,7 +19,6 @@
             width: 200px;
             height: 200px;
             background-color: red;
-            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -36,7 +35,7 @@
         })
 
         function balloonClick() {
-            let current = circle.offsetWidth;
+            let current = parseInt($("#circle").css("width"));
 
             if (current < 420) {
                 let newSize = current + 10;
@@ -52,7 +51,7 @@
         }
 
         function balloonLeave() {
-            let current = circle.offsetWidth;
+            let current = parseInt($("#circle").css("width"));
 
             if (current > 200) {
                 let newSize = current - 5;
