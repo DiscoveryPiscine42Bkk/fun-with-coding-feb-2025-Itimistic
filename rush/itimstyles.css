@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    background-color: #FBF8F1;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #FBF8F1;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background-color: #449C18;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px;
+    transition: opacity 0.3s;
+}
+
+.header a:hover {
+    opacity: 0.7;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vw 5vw;
+    height: 90vh;
+    position: relative;
+    text-align: left;
+}
+
+.hello {
+    opacity: 85%;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: bold;
+    animation: fadeInAnimation 3s forwards;
+}
+
+.hello.big {
+    font-size: clamp(100px, 15vw, 200px);
+}
+
+.pic1 {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: fadeInAnimation 3s forwards;
+}
+
+.pic1 img {
+    width: 100%;
+    height: auto;
+}
+
+.bio {
+    background-color: white;
+    opacity: 85%;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.gridbox .div1 {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.gridbox .div2 {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridbox img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.board div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: bold;
+    color: white;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.div3 { background-image: url("https://i.pinimg.com/736x/0f/73/2f/0f732f2f520afc9b768ddce6c9de2ebf.jpg"); }
+.div4 { background-image: url("https://i.pinimg.com/736x/13/cd/bb/13cdbbea2592b526bf4f6e3622fc85be.jpg"); }
+.div5 { background-image: url("https://i.pinimg.com/736x/9b/b5/47/9bb54790ea8836f11e874ee53b1c0948.jpg"); }
+.div6 { background-image: url("https://i.pinimg.com/736x/f7/8e/e0/f78ee0e690a15ca62edc89ef9681a036.jpg"); }
+
+.exp {
+    background-color: #EB9F25;
+    opacity: 85%;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.exp div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.div7 { background-image: url("debate.jpg"); }
+.div8 { background-color: #FBF8F1; }
+.div9 { background-image: url("staff.jpg"); }
+.div10 { background-color: #FBF8F1; }
+.div11 { background-image: url("hackathon.png"); }
+.div12 { background-color: #FBF8F1; }
+.div13 { background-image: url("graphic.png");}
+.div14 { background-color: #FBF8F1;}
+
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .greeting {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hello {
+        text-align: center;
+    }
+
+    .gridbox {
+        text-align: center;
+        align-items: center;
+    }
+
+    .board div {
+        height: 180px;
+    }
+
+    .div5 {
+        height: 300px;
+    }
+
+    .exp {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

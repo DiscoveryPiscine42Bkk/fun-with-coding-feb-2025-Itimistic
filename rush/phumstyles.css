@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: monospace;
+    background: url(profbg.jpg) 0 0 no-repeat fixed;
+    background-size: cover;
+}
+
+.nav-bar {
+    width: 100vw;
+    position: fixed;
+    background-color: #2F5996;
+    white-space: nowrap;
+}
+
+.blinking-cursor::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(2, start);
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    50% { content: ""; }
+}
+
+
+.nav-bar > a {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.25s;
+}
+
+.nav-bar > a:hover {
+    background-color: white;
+    color: black;
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+    color: white;
+    word-wrap: break-word;
+    padding-top: 30px;
+    text-shadow: 2px 2px #FF0000;
+}
+
+#home > * {
+    padding-left: 5%;
+}
+
+#home > :first-child {
+    font-size: 10vh;
+}
+
+#home > :nth-child(2){
+    font-size: 16vh;
+    margin: 0;
+}
+
+#home > :nth-child(2)::before, 
+#home > :nth-child(2)::after {
+    content: " — ";
+}
+
+
+#home > :last-child {
+    font-size: 14vh;
+}
+
+.src {
+    width: 100%;
+    height: 100%;
+    background-color: #F1F2F7;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.topic-header {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 3em;
+}
+
+.rounded-border {
+    border-radius: 24px;
+}
+
+.card {
+    padding: 10px;
+    background-color: white;
+}
+
+.card-img {
+    overflow: hidden;
+}
+
+.card > * {
+    padding: 10px;
+}
+
+.card-img > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card > p::before {
+    content: "\00a0\00a0";
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-size: 1.25em;
+}
+
+progress {
+    width: 100%;
+}
